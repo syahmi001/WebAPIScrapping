@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
+<h2>Lists of available APIS:</h2>
+<text>
+  /api/hello/ : returns "hello world" string;
+  <br />
+  /api/post/ : for POST request to upload file content to memcache server and
+  return a unique identifier;
+  <br />
+  /api/get/${file_id} : if provided the unique identifier for uploaded files,
+  the files will be returned;
+</text>
+{% endblock %}

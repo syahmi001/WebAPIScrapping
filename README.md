@@ -46,6 +46,13 @@ For this step, you can either use your own API key or use the attached .env file
 
 1. Use your own api:
     - Visit the official website [here.](https://developer.nytimes.com/)
+    - Register/Log in to your own account.
+    - Get your API Key.
+    - create .env file and put the value there. Example:
+   ```
+   # Environment variables for the project
+   API_KEY=<Put your key here>
+   ```
     
 2. Using the provided .env file:
     - Copy the `.env` file and put them at the root of the folder

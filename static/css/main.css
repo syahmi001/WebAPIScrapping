@@ -1,4 +1,10 @@
 body {
-    margin: 15;
+    margin: auto;
+    text-align: center;
     font-family: sans-serif;
+}
+table, th, td {
+  border: 1px solid black;
+  margin: auto;
+  padding: 1px;
 }

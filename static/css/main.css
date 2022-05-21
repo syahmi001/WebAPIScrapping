@@ -5,6 +5,15 @@ body {
 }
 table, th, td {
   border: 1px solid black;
+  width: 70%;
   margin: auto;
-  padding: 1px;
+  padding: 5px;
+  text-align: center;
+}
+
+.form {
+    margin-bottom: 50px;
+}
+#content {
+    width: 70%;
 }

@@ -1,12 +1,25 @@
-{% extends 'base.html' %} {% block head %} {% endblock %} {% block body %}
-<h2>Lists of available APIS:</h2>
-<text>
-  /api/hello/ : returns "hello world" string;
-  <br />
-  /api/post/ : for POST request to upload file content to memcache server and
-  return a unique identifier;
-  <br />
-  /api/get/${file_id} : if provided the unique identifier for uploaded files,
-  the files will be returned;
-</text>
-{% endblock %}
+{% extends 'base.html' %}
+{% block head %}
+<title>NYT Article List</title>
+{% endblock head %}
+{% block body %}
+<h2>Lists of Most Popular Article in NYT</h2>
+<h4>For a duration of 7 days. (Date ordered from Latest to Oldest)</h4>
+<div>
+  {% for data in datas %}
+    <div class="cards" onclick="getArticleInfo({{data['id']}})">
+      <span>Article title: </span>
+      <br>
+      <span class="text-bold">{{ data['title'] }}</span>
+      <p>Date Published: {{ data['published_date'] }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+function getArticleInfo(data) {
+  console.log(data)
+  window.location.href = `/api/${data}/`;
+}
+</script>
+{% endblock body %}

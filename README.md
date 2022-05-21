@@ -74,7 +74,7 @@ For this step, you can either use your own API key or use the attached .env file
 Run `script.py` to execute the program:
 
 ```bash
-python main.py
+python app.py
 ```
 
 To access the main, go to `http://localhost:5000/get-json/`

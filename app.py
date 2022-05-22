@@ -1,5 +1,4 @@
 import os
-import json
 
 from utils import get_json, get_article
 from flask import Flask, render_template, request
@@ -39,7 +38,6 @@ def article_info(id):
                 pass
     except:
         return 'There might be issue with API limit or ID not found. Please wait for a bit and try again!'
-
 
 
 # Returning error 404 if the page does not exist

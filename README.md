@@ -64,18 +64,27 @@ For this step, you can either use your own API key or use the attached .env file
     ├── templates          # HTML folder
     ├── utils              # Custom made Utils library to help with the automation scrapping script
     ├── .env <--(put here) # Automated tests (alternatively `spec` or `tests`)
-    ├── main.py            # The main file to run Flask App
+    ├── app.py            # The main file to run Flask App
     ├── requirements.txt   # Requirement file to install
     └── README.md
    ```
 
 ### Executing program
 
-Run `script.py` to execute the program:
+Run `app.py` to execute the program:
 
 ```bash
 python app.py
 ```
 
-To access the main, go to `http://localhost:5000/get-json/`
+To access the app, go to `http://localhost:5000/get-json/`
+
+### Deployment
+The app is deployed in `heroku`. To access it, you can click the link below:
+
+[https://web-api-scrapping.herokuapp.com/](https://web-api-scrapping.herokuapp.com/)
+
+   OR
+
+The link in project's `About` at top right of the Github page.
 

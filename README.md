@@ -88,6 +88,8 @@ To build docker image, simply run:
 docker build --tag webapi-scrapper .
 ```
 
+**Run Docker Image:**
+
 To run the image, run the following command:
 
 ```bash

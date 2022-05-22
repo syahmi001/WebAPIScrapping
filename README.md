@@ -1,5 +1,6 @@
 # WebAPIScrapping
- A flask App to scrap API from The NY Times Most Popular Articles API
+
+A flask App to scrap API from The NY Times Most Popular Articles API
 
 ## Getting Started
 
@@ -45,28 +46,26 @@ pip install -r requirements.txt
 For this step, you can either use your own API key or use the attached .env file.
 
 1. Use your own api:
-    - Visit the official website [here.](https://developer.nytimes.com/)
-    - Register/Log in to your own account.
-    - Get your API Key.
-    - create .env file and put the value there. Example:
+   - Visit the official website [here.](https://developer.nytimes.com/)
+   - Register/Log in to your own account.
+   - Get your API Key.
+   - create .env file and put the value there. Example:
    ```
    # Environment variables for the project
    API_KEY=<Put your key here>
    ```
-    
 2. Using the provided .env file:
-    - Copy the `.env` file and put them at the root of the folder
-    - The structure will be like this:
-    
-    ```
-    .
-    ├── static             # CSS folder
-    ├── templates          # HTML folder
-    ├── utils              # Custom made Utils library to help with the automation scrapping script
-    ├── .env <--(put here) # Automated tests (alternatively `spec` or `tests`)
-    ├── app.py            # The main file to run Flask App
-    ├── requirements.txt   # Requirement file to install
-    └── README.md
+   - Copy the `.env` file and put them at the root of the folder
+   - The structure will be like this:
+   ```
+   .
+   ├── static             # CSS folder
+   ├── templates          # HTML folder
+   ├── utils              # Custom made Utils library to help with the automation scrapping script
+   ├── .env <--(put here) # Automated tests (alternatively `spec` or `tests`)
+   ├── app.py            # The main file to run Flask App
+   ├── requirements.txt   # Requirement file to install
+   └── README.md
    ```
 
 ### Executing program
@@ -77,14 +76,32 @@ Run `app.py` to execute the program:
 python app.py
 ```
 
-To access the app, go to `http://localhost:5000/get-json/`
+To access the app, go to `http://localhost:5000`
+
+### Running the App in Docker
+
+**Build Docker Image:**
+
+To build docker image, simply run:
+
+```bash
+docker build --tag webapi-scrapper .
+```
+
+To run the image, run the following command:
+
+```bash
+docker run -d -p 5000:5000 webapi-scrapper
+```
+
+Then, the app is available at `http://localhost:5000`.
 
 ### Deployment
+
 The app is deployed in `heroku`. To access it, you can click the link below:
 
 [https://web-api-scrapping.herokuapp.com/](https://web-api-scrapping.herokuapp.com/)
 
-   OR
+OR
 
 The link in project's `About` at the top right of the Github page.
-

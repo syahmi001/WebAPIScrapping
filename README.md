@@ -90,7 +90,7 @@ docker build --tag webapi-scrapper .
 
 **Run Docker Image:**
 
-To run the image, run the following command:
+To run the image, use the following command:
 
 ```bash
 docker run -d -p 5000:5000 webapi-scrapper

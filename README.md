@@ -98,6 +98,8 @@ docker run -d -p 5000:5000 webapi-scrapper
 
 Then, the app is available at `http://localhost:5000`.
 
+(Note: Don't forget to include `.env` file to be copied into your container!)
+
 ### Deployment
 
 The app is deployed in `heroku`. To access it, you can click the link below:

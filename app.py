@@ -1,5 +1,7 @@
 import os
-from utils import get_json
+import json
+
+from utils import get_json, get_article
 from flask import Flask, render_template, request
 
 from dotenv import load_dotenv
@@ -23,19 +25,27 @@ def index():
 
 
 # Path to the specific info for each article
+# Looping through article id to get the matching id
 @app.route('/api/<int:id>/', methods=['GET'])
 def article_info(id):
-    return "Hello " + str(id)
+    data = get_article(id, URL)
+    articles = data['results']
+    try:
+        for i in range(len(articles)):
+            if articles[i]['id'] == id:
+                matched_article = articles[i]
+                return render_template('article.html', article=matched_article)
+            else:
+                pass
+    except:
+        return 'There might be issue with API limit or ID not found. Please wait for a bit and try again!'
 
 
-@app.route('/hello/', methods=['GET'])
-def hello_world():
-    return "Hello world!"
 
-
+# Returning error 404 if the page does not exist
 @app.errorhandler(404)
 def page_not_found(e):
-    return "Opps! It seems the resource you are looking does not exist!"
+    return render_template('404.html')
 
 
 if __name__ == '__main__':

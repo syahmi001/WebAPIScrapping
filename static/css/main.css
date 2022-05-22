@@ -9,12 +9,33 @@ body {
 .cards {
     background-color: #483D8B;
     color: white;
-    justify-content: center
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
     text-align: center;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 10px 5px;
+}
+
+.align-left {
+    text-align: justify;
+}
+
+.cards:hover {
+    background-color: #87CEEB;
+    color: black;
+}
+
+.card {
+    background-color: #87CEEB;
+    color: black;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    border-width: 10px 5px;
 }
 
 .text-bold {

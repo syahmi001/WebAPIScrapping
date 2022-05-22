@@ -86,5 +86,5 @@ The app is deployed in `heroku`. To access it, you can click the link below:
 
    OR
 
-The link in project's `About` at top right of the Github page.
+The link in project's `About` at the top right of the Github page.
 
